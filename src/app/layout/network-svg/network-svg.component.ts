@@ -66,8 +66,6 @@ export class NetworkSvgComponent implements OnChanges {
       var the_nodes = this.active_nodes.map(function(no) {
         return this.getNodeById(no);
       }, this);
-      console.log(the_nodes);
-      console.log(this.active_nodes)
       if (the_nodes.length >= 2) {
         for (let x = 0; x < the_nodes.length; x++) {
           for (let i = x + 1; i < the_nodes.length; i++) {
