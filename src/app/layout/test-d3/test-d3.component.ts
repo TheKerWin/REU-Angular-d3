@@ -88,7 +88,8 @@ export class TestD3Component {
                     if (!fs.actions.includes("OUTPUT:CONTROLLER")) {
                       updated_matches.push({ "switch": switch_no, "out_port": fs.actions[0], "match": fs.match });
                       if (!active_nodes.includes(switch_no)) {
-                        active_nodes.push([switch_no, fs.actions[0].substring(7)]);
+                        var diff = parseInt(old_fs.byte_count) - parseInt(fs.byte_count);
+                        active_nodes.push([switch_no, fs.actions[0].substring(7), diff]);
                         comp.active_nodes = active_nodes.slice();
                       }
                     }

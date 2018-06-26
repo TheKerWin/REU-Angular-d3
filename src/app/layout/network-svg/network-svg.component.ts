@@ -83,21 +83,23 @@ export class NetworkSvgComponent implements OnChanges {
       // Assume all links are not active until decided later
       this.links.forEach(link => {
         link.active = false;
+        link.byteRate = 0;
       })
     }
 
     if (this.nodes) {
       if (this.active_nodes) {
-        console.log(this.active_nodes)
-        var link_pairs = this.active_nodes.filter(function (pair) {
-          return (this.ports[pair[0]][pair[1]]);
-        }, this).map(function (pair) {
-          return [this.getNodeById(pair[0]), this.getNodeById(this.ports[pair[0]][pair[1]])];
+        var link_pairs = this.active_nodes.filter(function (tuple) {
+          return (this.ports[tuple[0]][tuple[1]]);
+        }, this).map(function (tuple) {
+          return [this.getNodeById(tuple[0]), this.getNodeById(this.ports[tuple[0]][tuple[1]]), tuple[2]];
         }, this);
         for (let link_pair of link_pairs) {
           let l = this.getLink(link_pair[0], link_pair[1]);
           if (l) {
             l.active = true;
+            console.log(link_pair[2])
+            l.byteRate = link_pair[2];
           }
         }
       }

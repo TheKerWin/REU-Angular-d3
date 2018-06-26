@@ -1,4 +1,6 @@
 import { Node } from './node';
+import { BitRateUnit } from './pipes/bit-rate-unit'
+import { filter } from 'rxjs/operator/filter';
 
 export class Link {
     id: number;
@@ -9,6 +11,7 @@ export class Link {
     yloc: number;
     enabled: boolean;
     active: boolean;
+    byteRate: number;
 
     constructor(obj: any) {
         this.id = obj.id;
@@ -19,13 +22,17 @@ export class Link {
         this.yloc = obj.yloc;
         this.enabled = true;
         this.active = false;
+        this.byteRate = 0;
     }
 
 
-    getInfoLst() { //Reconsider the format of "connection: node... substring(7)"
-        return ["Link ID: " + this.id.toString(),
-        //"Connection: Node " + this.nodeId.toString() + ", Node " + this.nexthopNode.substring(7),
+    getInfoLst() {
+        var data = ["Link ID: " + this.id.toString(),
         "Bandwidth: " + this.bw.toString()];
+        if (this.byteRate) {
+            data.push("Bit rate: " + this.filterUnit(this.byteRate / 3, true));
+        }
+        return data;
 
     }
     equals(other: Link): boolean {
@@ -37,4 +44,23 @@ export class Link {
             && this.yloc == other.yloc
             && this.nodeId[0] == other.nodeId[0]
     }
+
+    private filterUnit(count, isBytes) {
+        if (isBytes) {
+            count = count * 8;
+        }
+
+        if (count < 1000) {
+            return count + " bps";
+        }
+        else if (count <= 1000000) {
+            return (count / 1000).toFixed(2) + " Kbps"
+        }
+        else if (count <= 1000000000) {
+            return (count / 1000000).toFixed(2) + " Mbps"
+        }
+        else {
+            return (count / 1000000000).toFixed(2) + " Gbps"
+        }
+    };
 }
