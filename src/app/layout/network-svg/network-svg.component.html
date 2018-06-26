@@ -40,41 +40,41 @@
 		      	<div id="wireless-container" class="modal-container" *ngIf="selectedNode.wireless">
 		      		<div class="form-inline">
 			      		<label for="interface">Interface: </label>
-			      		<input type="text" name="interface" class="form-control" [(ngModel)]="selectedNode.wireless.intName">
+			      		<input type="text" name="interface" class="form-control" [(ngModel)]="selectedNode.wireless[index].intName">
 		      		</div>
 		      		<div class="form-inline">
 			      		<label for="wireless-ip">Wireless IP: </label>
-			      		<input type="text" name="wireless-ip" class="form-control"[(ngModel)]="selectedNode.wireless.ipAdd">
+			      		<input type="text" name="wireless-ip" class="form-control"[(ngModel)]="selectedNode.wireless[index].ipAdd">
 		      		</div>
 		      		<div class="form-inline">
 			      		<label for="wireless-mac">Wireless MAC: </label>
-			      		<input type="text" name="wireless-mac" class="form-control" [(ngModel)]="selectedNode.wireless.macAdd">
+			      		<input type="text" name="wireless-mac" class="form-control" [(ngModel)]="selectedNode.wireless[index].macAdd">
 		      		</div>
 		      		<div class="form-inline">
 			      		<label for="channel">Channel MAC: </label>
-			      		<input type="text" name="channel" class="form-control" [(ngModel)]="selectedNode.wireless.channel">
+			      		<input type="text" name="channel" class="form-control" [(ngModel)]="selectedNode.wireless[index].channel">
 		      		</div>
 		      		<div class="form-inline">
 			      		<label for="power">Power: </label>
-			      		<input type="text" name="power" class="form-control" [(ngModel)]="selectedNode.wireless.power">
+			      		<input type="text" name="power" class="form-control" [(ngModel)]="selectedNode.wireless[index].power">
 		      		</div>
 		      		<div class="form-inline">
 		      		<label for="mode">Mode: </label>
-			      		<select name="mode" class="form-control" [(ngModel)]="selectedNode.wireless.mode">
-			      			<option *ngFor="let value of selectedNode.wireless.modes" class="form-control" [value]="value">{{value}}</option>
+			      		<select name="mode" class="form-control" [(ngModel)]="selectedNode.wireless[index].mode">
+			      			<option *ngFor="let value of selectedNode.wireless[index].modes" class="form-control" [value]="value">{{value}}</option>
 			      		</select>
 		      		</div>
 		      		<div class="form-inline">
 			      		<label for="bw">Band Width: </label>
-			      		<input type="text" name="bw" class="form-control" [(ngModel)]="selectedNode.wireless.bw">
+			      		<input type="text" name="bw" class="form-control" [(ngModel)]="selectedNode.wireless[index].bw">
 		      		</div>
 		      		<div class="form-inline">
 			      		<label for="bssid">BSSID: </label>
-			      		<input type="text" name="bssid" class="form-control" [(ngModel)]="selectedNode.wireless.bssid">
+			      		<input type="text" name="bssid" class="form-control" [(ngModel)]="selectedNode.wireless[index].bssid">
 		      		</div>
 		      		<div class="form-inline">
 			      		<label for="bridge">Bridge: </label>
-			      		<input type="text" name="bridge" class="form-control" [(ngModel)]="selectedNode.wireless.bridge">
+			      		<input type="text" name="bridge" class="form-control" [(ngModel)]="selectedNode.wireless[index].bridge">
 		      		</div>
 		      	</div>
 			</div>
