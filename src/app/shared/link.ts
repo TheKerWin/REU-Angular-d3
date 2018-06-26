@@ -1,5 +1,4 @@
 import { Node } from './node';
-import { BitRateUnit } from './pipes/bit-rate-unit'
 import { filter } from 'rxjs/operator/filter';
 
 export class Link {
