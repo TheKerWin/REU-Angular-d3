@@ -3,17 +3,11 @@
     <style>
       .cls-1 {
         fill: none;
-        stroke: #fff;
-      }
-
-      .cls-2 {
-        fill: #fff;
-        font-size: 11px;
-        font-family: HelveticaNeue, Helvetica Neue;
+        stroke: #292b2c;
       }
     </style>
   </defs>
-  <g id="Symbol_3_1" data-name="Symbol 3 – 1" transform="translate(143 176)">
+  <g id="Symbol_5_1" data-name="Symbol 5 – 1" transform="translate(143 176)">
     <path id="Path_1" data-name="Path 1" class="cls-1" d="M229.274,190.215h65.615v3.808h4.235v-3.808h68.27v3.808h5.838v-3.808h68.077v3.808h5.863v-3.808h66.685v3.808h12.879v-3.808h55.439v3.808H593.3v-3.808h68.125v3.808h5.292v-3.808h66.238v3.808h8.921v-3.808h66.194v3.808h5.649v-3.808H879.61v6.529h5.205v40.635H879.61v208.7h6.021v41.112H879.61v5.773H814.221v-4.1H807.1v4.1H741.376v-4.1h-8.617v4.1H667.085v-4.1h-5.9v4.1H593.1v-4.1h-2.565v-34.61h-9.207v8.727h5.763v21.934h-5.763v8.047h-54.4v-8.047h-6.48V462.984h6.48v-7.071h-8.63v32.954h-5.3v4.1h-65.8v-4.1h-6.335v4.1H374.315v-4.1h-6.792v4.1h-67.28v-4.1h-5.394v4.1H228.591v-8.059h-5.37V441.18h3.285v-3.489H168.043V375.362h3.711v-6.021h-3.711v-56.5h3.711v-4.529h-3.711V244.8h52.388v2.982h6.075v-7.167h-3.285V196.866h6.052Z" transform="translate(30 1)"/>
     <path id="Path_2" data-name="Path 2" class="cls-1" d="M266.95,193.191v44.455h23.016" transform="translate(60.124 1.947)"/>
     <path id="Path_3" data-name="Path 3" class="cls-1" d="M293.938,190.215v48.378" transform="translate(69.588 1)"/>
@@ -85,11 +79,5 @@
     <path id="Path_70" data-name="Path 70" class="cls-1" d="M683.145,190.215v48.617h-2.567" transform="translate(192.994 1)"/>
     <path id="Path_71" data-name="Path 71" class="cls-1" d="M693.114,227.134h19.259" transform="translate(196.98 12.741)"/>
     <path id="Path_72" data-name="Path 72" class="cls-1" d="M599.411,241.975V408.441" transform="translate(167.182 17.461)"/>
-    <text id="WiNs" class="cls-2" transform="translate(348 309)"><tspan x="0" y="0">WiNs</tspan></text>
-    <text id="Center_for_Education_Innovation" data-name="Center
- for
- Education Innovation" class="cls-2" transform="translate(704 378)"><tspan x="-16.5" y="0">Center</tspan><tspan x="-8.146" y="12" xml:space="preserve"> for</tspan><tspan x="-53.383" y="24" xml:space="preserve"> Education Innovation</tspan></text>
-    <text id="Student_Center" data-name="Student
-Center" class="cls-2" transform="translate(586 216)"><tspan x="-19.36" y="0">Student</tspan><tspan x="-16.5" y="12">Center</tspan></text>
   </g>
 </svg>

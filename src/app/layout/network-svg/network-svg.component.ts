@@ -26,6 +26,7 @@ export class NetworkSvgComponent implements OnChanges {
     "text": "#292b2c",
     "packet": "white"
   };
+  // 292b2c
   private static readonly PADDING = 20;
   private static readonly SVG_FILL = "#292b2c";
   private static readonly PACKETS_PER_LINE = 3;
@@ -98,7 +99,7 @@ export class NetworkSvgComponent implements OnChanges {
           let l = this.getLink(link_pair[0], link_pair[1]);
           if (l) {
             l.active = true;
-            console.log(link_pair[2])
+            console.log(link_pair[2]);
             l.byteRate = link_pair[2];
           }
         }
@@ -114,7 +115,6 @@ export class NetworkSvgComponent implements OnChanges {
         if (wn.ipAdd === ip) {
           thisNode = true;
         }
-
       })
       return thisNode;
     })
